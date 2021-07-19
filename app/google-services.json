@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1084602537864",
+    "project_id": "rover-controller",
+    "storage_bucket": "rover-controller.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084602537864:android:bbb56ddc59a6717d094c3d",
+        "android_client_info": {
+          "package_name": "com.example.rovercontroller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084602537864-3rt0uggua9ftv27rjgfqbagkiduom245.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcGmtpPeTG8jrMnGXZWt3JkLBzdyC6O0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084602537864-3rt0uggua9ftv27rjgfqbagkiduom245.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

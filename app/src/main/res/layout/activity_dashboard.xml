@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+
+    <include layout="@layout/action_bar_custom"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <ImageView
+        android:id="@+id/bluetoothIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintTop_toBottomOf="@id/status" />
+
+    <Button
+        android:id="@+id/turn_on_btn"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:minWidth="200dp"
+        android:text="Turn On"
+        android:background="@drawable/custombutton"
+        app:backgroundTint="#c30000"
+        app:layout_constraintEnd_toEndOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        />
+
+
+
+    <Button
+        android:id="@+id/turn_off_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:text="Turn Off"
+        app:backgroundTint="#c30000"
+        android:layout_marginTop="274dp"
+        android:background="@drawable/custombutton"
+        app:layout_constraintEnd_toEndOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/discoverable_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200dp"
+        android:text="Discoverable"
+        android:background="@drawable/custombutton"
+        app:backgroundTint="#c30000"
+        android:layout_marginTop="344dp"
+        app:layout_constraintEnd_toEndOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="Select Bluetooth Device:"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/deviceSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/deviceSpinner"
+        android:layout_marginBottom="5dp"/>
+
+    <Spinner
+        android:spinnerMode="dialog"
+        android:id="@+id/deviceSpinner"
+        android:background="@drawable/custombackgroundspinner"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/discoverable_btn"
+        app:layout_constraintBottom_toTopOf="@id/continue_btn"
+        app:layout_constraintStart_toStartOf="@id/discoverable_btn"
+        app:layout_constraintEnd_toEndOf="@id/discoverable_btn"/>
+
+
+
+
+    <Button
+        android:id="@+id/continue_btn"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Continue"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        app:backgroundTint="#c30000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+        android:gravity="center"
+        android:paddingStart="100dp"
+        android:paddingLeft="100dp"
+        android:paddingEnd="140dp"
+        android:paddingRight="140dp" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/continue_btn"
+        app:layout_constraintEnd_toEndOf="@id/continue_btn"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="@id/continue_btn"
+        app:layout_constraintTop_toTopOf="@id/continue_btn"
+        android:background="@drawable/ic_baseline_arrow_forward_24"/>
+
+        <!--
+        app:layout_constraintEnd_toEndOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        android:layout_marginTop="554dp"-->
+<!--
+    <ImageView
+        android:id="@+id/logoutimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>

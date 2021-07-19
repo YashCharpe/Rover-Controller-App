@@ -1,0 +1,60 @@
+package com.example.rovercontroller;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+
+public class MainActivity extends AppCompatActivity {
+
+    Animation topAnim, bottomAnim;
+    ImageView app_logo;
+    TextView name;
+
+    FirebaseAuth fauth;
+    private static int SPLASH_SCREEN = 5000;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_main);
+
+        topAnim = AnimationUtils.loadAnimation(this ,R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this ,R.anim.bottom_animation);
+
+        app_logo = findViewById(R.id.logo);
+        name = findViewById(R.id.app_name);
+        fauth=FirebaseAuth.getInstance();
+
+        app_logo.setAnimation(topAnim);
+        name.setAnimation(bottomAnim);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(fauth.getCurrentUser()==null)
+                {
+                    Intent intent = new Intent(MainActivity.this,GetStartedPageViewActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else{
+                    startActivity(new Intent(getApplicationContext(),Dashboard.class));
+                    finish();
+                }
+
+            }
+        },SPLASH_SCREEN);
+
+    }
+}

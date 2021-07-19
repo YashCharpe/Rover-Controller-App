@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpPage"
+    android:background="@drawable/reg_background">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/reg_user_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <TextView
+        android:id="@+id/welcometv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!!"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.378"
+        android:textAlignment="textStart"
+        android:gravity="center_horizontal"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/welcometv"
+        app:layout_constraintStart_toStartOf="@id/welcometv"
+        android:text="Create Account"
+        android:textColor="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email ID"
+        android:paddingStart="35dp"
+        android:paddingLeft="35dp"
+        android:background="@drawable/customedittextbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"/>
+
+    <ImageView
+        android:id="@+id/usernamelogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toTopOf="@id/emailEditText"
+        app:layout_constraintBottom_toBottomOf="@id/emailEditText"
+        android:background="@drawable/ic_email"/>
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/customedittextbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
+        app:layout_constraintVertical_bias="0.122"
+        android:paddingStart="35dp"
+        android:paddingLeft="35dp"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"/>
+
+    <ImageView
+        android:id="@+id/passwordlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toTopOf="@id/passwordEditText"
+        app:layout_constraintBottom_toBottomOf="@id/passwordEditText"
+        android:background="@drawable/ic_baseline_lock_24"/>
+
+    <ImageView
+        android:id="@+id/showpasswordimg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintTop_toTopOf="@id/passwordEditText"
+        app:layout_constraintEnd_toEndOf="@id/passwordEditText"
+        app:layout_constraintBottom_toBottomOf="@id/passwordEditText"
+        android:src="@drawable/ic_eye_open"/>
+
+    <Button
+        android:id="@+id/signBtn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button"
+        android:text="SIGN UP"
+        app:backgroundTint="#c30000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <TextView
+        android:id="@+id/or_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/signBtn"
+        app:layout_constraintStart_toStartOf="@id/signBtn"
+        app:layout_constraintEnd_toEndOf="@id/signBtn"
+        android:text="OR"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/or_tv"
+        app:layout_constraintStart_toStartOf="@id/signBtn"
+        app:layout_constraintEnd_toEndOf="@id/signBtn"
+        android:background="@drawable/rounded_button"
+        app:backgroundTint="#c30000"
+        android:layout_marginTop="5dp"
+        android:text="LOGIN"/>
+
+    <ProgressBar
+        android:id="@+id/prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
+        app:layout_constraintStart_toStartOf="@id/passwordEditText"
+        app:layout_constraintEnd_toEndOf="@id/passwordEditText"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
